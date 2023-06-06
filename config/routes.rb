@@ -3,4 +3,12 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  resources :users, only: [:create]
+  resources :sessions, only: [:create]
+  resources :courses, only: [:index, :create] do
+    member do
+      post 'enroll'
+    end
+  end
 end
+
