@@ -15,6 +15,7 @@ class CourseFetcherWorker
   
     def fetch_courses
       # Implement the logic to fetch courses from the remote API
+      
     end
   end
   
