@@ -11,7 +11,7 @@ class ApplicationController < ActionController::API
     header = request.headers['Authorization']
     raise ExceptionHandler::MissingToken unless header
 
-    token = header.split(' ').last
+    token = header.split.last
     decoded_token = JsonWebToken.decode(token)
     @current_user = User.find(decoded_token[:user_id])
   rescue ActiveRecord::RecordNotFound, JWT::DecodeError => e
