@@ -76,9 +76,9 @@ gem 'bcrypt'
 gem 'jwt'
 gem 'jsonapi-serializer'
 gem 'rack-cors'
-gem 'rspec-rails', group: :test
-gem 'factory_bot_rails', group: :test
-gem 'faker', group: :test
+gem 'rspec-rails'
+gem 'factory_bot_rails'
+gem 'faker'
 gem 'httparty'
 gem "sidekiq-cron"
 
