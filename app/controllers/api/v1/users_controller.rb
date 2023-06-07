@@ -11,12 +11,8 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def enrolled_courses
-    if authenticated_user?
       courses = @current_user.courses
       render json: courses, status: :ok
-    else
-      render json: { errors: 'Invalid token' }, status: :unauthorized
-    end
   end
 
   private

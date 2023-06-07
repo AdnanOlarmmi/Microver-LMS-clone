@@ -16,7 +16,3 @@ class Api::V1::CoursesController < ApplicationController
     render json: "Enrolled in #{course.name} successfully, Congratulations", status: :ok
   end
 end
-
-# every 1.day, at: '08:50 pm' do
-#     runner 'FetchCoursesWorker.perform_async'
-# end

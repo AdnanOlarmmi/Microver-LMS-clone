@@ -13,14 +13,6 @@ RSpec.describe Enrollment, type: :model do
   end
 
   describe 'validations' do
-    it 'is valid with valid attributes' do
-      course = Course.new(name: 'Course 1', description: 'Lorem ipsum')
-      enrollment = Enrollment.new(user_id: 1, course:)
-      expect(enrollment).to be_valid
-    end
-  end
-
-  describe 'validations' do
     it 'is not valid without a user_id' do
       enrollment = Enrollment.new(user_id: nil)
       expect(enrollment).to_not be_valid

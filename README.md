@@ -39,7 +39,7 @@
 - Course registration.
 
 ### Video Description
-- [Watch a video description given by me](https://www.loom.com/share/cf648f115dac4140971a0b3606553780)
+- [Watch a video description given by me]()
 
 ## Getting Started 
 
@@ -58,7 +58,7 @@ To setup the project follow the steps:
 
 1. Download the zip folder
   
-2. Unzip it with any Unzipping software of your choice like WinRAR.
+2. Unzip it with any software of your choice such as WinRAR.
 
 3. Setup the app's database
     ```
@@ -68,7 +68,10 @@ To setup the project follow the steps:
     ```
     rails db:seed
     ```
-
+5. To run sidekiq for sequential calling of data into the local database run
+    ```
+    sidekiq
+    ```
 
 ### Available Scripts
 

@@ -1,3 +1,3 @@
 course_fetcher:
-    cron: '*/1 * * * *' # Runs every 4 hours
+    cron: '*/3 * * * *' # Runs every 4 hours
     class: CourseFetcherWorker

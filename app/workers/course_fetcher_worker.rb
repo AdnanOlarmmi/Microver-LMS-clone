@@ -25,7 +25,6 @@ class CourseFetcherWorker
         { 'name' => course_attributes['title'], 'description' => course_attributes['description'] }
       end
     else
-      # Handle error cases, e.g., log the error or show an error message
       render json: { message: 'Error fetching courses' }, status: :unprocessable_entity
     end
   end
