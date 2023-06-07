@@ -11,8 +11,8 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def enrolled_courses
-      courses = @current_user.courses
-      render json: courses, status: :ok
+    courses = @current_user.courses
+    render json: courses, status: :ok
   end
 
   private

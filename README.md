@@ -39,7 +39,7 @@
 - Course registration.
 
 ### Video Description
-- [Watch a video description given by me]()
+- [Watch a video description given by me](https://www.loom.com/share/fd8f9db88d464f14953a85f2c58672bc), To be continued [here](https://www.loom.com/share/3a65b8d10fd447eb8d54fdcd00c190c0)
 
 ## Getting Started 
 
