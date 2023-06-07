@@ -1,4 +1,0 @@
-:schedule:
-  course_fetcher_worker:
-    cron: '0 */1 * * *' # Runs every 4 hours
-    class: CourseFetcherWorker

@@ -283,7 +283,6 @@ DEPENDENCIES
   rails (~> 7.0.5)
   rspec-rails
   selenium-webdriver
-  sidekiq
   sidekiq-cron
   sprockets-rails
   sqlite3 (~> 1.4)

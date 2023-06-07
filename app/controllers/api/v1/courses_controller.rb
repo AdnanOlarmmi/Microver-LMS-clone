@@ -7,25 +7,6 @@ class Api::V1::CoursesController < ApplicationController
     def index
         @courses = Course.all
         render json: @courses, status: :ok
-    # url = 'https://microverse-take-home-api.herokuapp.com/api/v1/courses'
-    # headers = { 'Authorization' => 'Bearer tooth.RED.bear.fork' }
-
-    # response = HTTParty.get(url, headers: headers)
-
-    # if response.code == 200
-    #   courses_data = JSON.parse(response.body)['data']
-    #   courses_data.each do |course_data|
-    #     course_attributes = course_data['attributes']
-    #     Course.create(name: course_attributes['title'], description: course_attributes['description'])
-    #   end
-      
-    #     @courses = Course.all
-    #     render json: @courses, status: :ok
-    #   else
-    #     # Handle error cases, e.g., log the error or show an error message
-    #     @courses = []
-    #     render json: { message: 'Error fetching courses' }, status: :unprocessable_entity
-    #   end
     end
   
     def enroll

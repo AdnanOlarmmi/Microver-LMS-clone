@@ -79,6 +79,6 @@ gem 'rack-cors'
 gem 'rspec-rails', group: :test
 gem 'factory_bot_rails', group: :test
 gem 'faker', group: :test
-gem 'sidekiq'
-gem 'sidekiq-cron'
 gem 'httparty'
+gem "sidekiq-cron"
+

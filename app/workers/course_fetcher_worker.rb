@@ -2,20 +2,34 @@ class CourseFetcherWorker
     include Sidekiq::Worker
   
     def perform
-      # Fetch courses from the remote API
       courses = fetch_courses
-  
-      # Update the local database with new courses
       courses.each do |course|
-        Course.create(name: course['name'], description: course['description'])
+        Course.find_or_create_by(name: course['name']) do |c|
+          c.description = course['description']
+        end
       end
     end
   
     private
   
     def fetch_courses
-      # Implement the logic to fetch courses from the remote API
-      
+      url = 'https://microverse-take-home-api.herokuapp.com/api/v1/courses'
+      headers = { 'Authorization' => 'Bearer tooth.RED.bear.fork' }
+  
+      response = HTTParty.get(url, headers: headers)
+  
+      if response.code == 200
+        courses_data = JSON.parse(response.body)['data']
+        courses_data.map do |course_data|
+          course_attributes = course_data['attributes']
+          { 'name' => course_attributes['title'], 'description' => course_attributes['description'] }
+        end
+      else
+        # Handle error cases, e.g., log the error or show an error message
+        render json: { message: 'Error fetching courses' }, status: :unprocessable_entity
+      end
     end
   end
   
+
+
