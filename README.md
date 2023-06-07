@@ -17,15 +17,13 @@
 - [🙏 Acknowledgements](#acknowledgments)
 - [📝 License](#license)
 
-
 # Microverse LMS for Internship
-
 
 **An Learning Management System in short LMS** is a software application for the administration, documentation, tracking, reporting, automation, and delivery of educational courses, training programs, materials or learning and development programs. The learning management system concept emerged directly from e-Learning.
 
 ## Built With
 
-### Tech Stack 
+### Tech Stack
 
 <ul>
   <li><a href="https://www.ruby-lang.org/en/news/2022/11/24/ruby-3-1-3-released/">Ruby 3.1</a></li>
@@ -39,39 +37,40 @@
 - Course registration.
 
 ### Video Description
-- [Watch a video description given by me](https://www.loom.com/share/fd8f9db88d464f14953a85f2c58672bc), To be continued [here](https://www.loom.com/share/3a65b8d10fd447eb8d54fdcd00c190c0)
 
-## Getting Started 
+- [Watch a video description given by me](https://www.loom.com/share/fd8f9db88d464f14953a85f2c58672bc), To be continued [here](https://www.loom.com/share/d86e7d1821c344cd8d561411c49b32db)
+
+## Getting Started
 
 To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-  - <a href="https://www.ruby-lang.org/en/news/2022/11/24/ruby-3-1-3-released/">Ruby</a>
-  - <a href="https://rubyonrails.org/">Ruby on Rails</a>
-  - <a href="https://www.postgresql.org/">PostgreSQL</a>
-  - any code editor
+- <a href="https://www.ruby-lang.org/en/news/2022/11/24/ruby-3-1-3-released/">Ruby</a>
+- <a href="https://rubyonrails.org/">Ruby on Rails</a>
+- <a href="https://www.postgresql.org/">PostgreSQL</a>
+- any code editor
 
 ### Setup
 
 To setup the project follow the steps:
 
 1. Download the zip folder
-  
+
 2. Unzip it with any software of your choice such as WinRAR.
 
 3. Setup the app's database
-    ```
-    rails db:setup
-    ``` 
+   ```
+   rails db:setup
+   ```
 4. To input existing local data run.
-    ```
-    rails db:seed
-    ```
+   ```
+   rails db:seed
+   ```
 5. To run sidekiq for sequential calling of data into the local database run
-    ```
-    sidekiq
-    ```
+   ```
+   sidekiq
+   ```
 
 ### Available Scripts
 
@@ -80,6 +79,7 @@ In the project directory, you can run:
 - ```
   rails server
   ```
+
   Runs the app server
 
 - ```
@@ -100,7 +100,7 @@ In the project directory, you can run:
 - Implement user engagement features (likes, comments and ratings) for each course list.
 - Enable user to add more personal information.
 
-## Contributing 
+## Contributing
 
 Contributions, issues, and feature requests are welcome!
 
@@ -110,10 +110,11 @@ Feel free to [mail me](adnanishaqola@gmail.com) for suggestions, contributions, 
 
 If you like this project give it a star!
 
-## Acknowledgments 
+## Acknowledgments
 
-- Microverse 
+- Microverse
 
-## License 
+## License
 
 This project is [MIT](./LICENSE) licensed.
+
