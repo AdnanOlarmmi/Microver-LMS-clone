@@ -64,6 +64,10 @@ To setup the project follow the steps:
     ```
     rails db:setup
     ``` 
+4. To input existing local data run.
+    ```
+    rails db:seed
+    ```
 
 
 ### Available Scripts
