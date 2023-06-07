@@ -1,5 +1,5 @@
 
-require_relative '../../../assets/workers/fetch_courses_worker.rb'
+
 
 class Api::V1::CoursesController < ApplicationController
     before_action :authorize_request, except: [:index]
@@ -17,15 +17,11 @@ class Api::V1::CoursesController < ApplicationController
     response = HTTParty.get(url, headers: headers)
 
     if response.code == 200
-        courses_data = JSON.parse(response.body)['data']
-        courses_data.each do |course_data|
-          course_attributes = course_data['attributes']
-          Course.find_or_create_by(course_id: course_data['id']) do |new_course|
-            new_course.id = course_data['id']
-            new_course.name = course_attributes['title']
-            new_course.description = course_attributes['description']
-          end
-        end
+      courses_data = JSON.parse(response.body)['data']
+      courses_data.each do |course_data|
+        course_attributes = course_data['attributes']
+        Course.create(name: course_attributes['title'], description: course_attributes['description'])
+      end
       
         @courses = Course.all
         render json: @courses, status: :ok
@@ -47,7 +43,7 @@ class Api::V1::CoursesController < ApplicationController
     def enroll
         course = Course.find(params[:id])
         if @current_user.courses.include?(course)
-            render json: { message: 'You are already enrolled' }, status: :ok
+            render json: "You are already enrolled in #{course.name}", status: :ok
             return
         end
         Enrollment.create(user_id: @current_user.id, course_id: course.id)
@@ -55,8 +51,8 @@ class Api::V1::CoursesController < ApplicationController
         # render json: @current_user, status: :ok
     #   course = Course.find(params[:id])
     #   @current_user.courses << course
-    render json:  @current_user.courses, status: :ok
-    #   render json: { message: 'Enrolled successfully' }, status: :ok
+    # render json:  @current_user.courses, status: :ok
+      render json:  "Enrolled in #{course.name} successfully, Congratulations", status: :ok
     end
 end
   
