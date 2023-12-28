@@ -17,7 +17,7 @@
 - [🙏 Acknowledgements](#acknowledgments)
 - [📝 License](#license)
 
-# Microverse LMS for Internship
+# Microverse LMS clone
 
 **An Learning Management System in short LMS** is a software application for the administration, documentation, tracking, reporting, automation, and delivery of educational courses, training programs, materials or learning and development programs. The learning management system concept emerged directly from e-Learning.
 
