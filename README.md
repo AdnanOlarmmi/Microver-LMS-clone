@@ -19,7 +19,16 @@
 
 # Microverse LMS clone
 
-**An Learning Management System in short LMS** is a software application for the administration, documentation, tracking, reporting, automation, and delivery of educational courses, training programs, materials or learning and development programs. The learning management system concept emerged directly from e-Learning.
+**A Learning Management System in short LMS** is a software application for the administration, documentation, tracking, reporting, automation, and delivery of educational courses, training programs, materials, or learning and development programs. The learning management system concept emerged directly from e-learning.
+
+It's the first API endpoint of a learning management system. This API is compliant with the JSON: API specification and uses JWT for authentication.
+The API has endpoints for signing in and signing up, listing courses, enrolling in a course, and listing all courses that the current user is enrolled in.
+Additionally, the application periodically fetches courses from a remote API and stores them locally.
+
+The API is JSONAPI-compliant.
+The API supports authentication with JWT.
+Baked solutions like Devise::JWT or Knock weren't used; It was implemented at a lower level using bcrypt.
+
 
 ## Built With
 
@@ -35,6 +44,14 @@
 
 - User registration system.
 - Course registration.
+- The API has endpoints to:
+  - Create a new user account with the given email and password.
+  - Authenticate a user with the given email and password and return a JWT token.
+  - Return a list of all courses (including course name and description).
+  - Enroll the current user in a course with a given course ID.
+  - Return a list of all courses that the current user is enrolled in (including the names of the courses the user is enrolled in and the respective enrollment dates).
+  - A user may enroll in multiple courses simultaneously, and a course may have many enrolled students at the same time.
+  - Finally, the application also has a Sidekiq worker that periodically fetches data from a remote API and updates the local database with new courses. It was scheduled to run periodically.
 
 ### Video Description
 
@@ -53,7 +70,7 @@ To get a local copy up and running follow these simple steps.
 
 ### Setup
 
-To setup the project follow the steps:
+To set up the project follow the steps:
 
 1. Download the zip folder
 
@@ -97,14 +114,14 @@ In the project directory, you can run:
 
 ## Future Feature
 
-- Implement user engagement features (likes, comments and ratings) for each course list.
-- Enable user to add more personal information.
+- Implement user engagement features (likes, comments, and ratings) for each course list.
+- Enable users to add more personal information.
 
 ## Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to [mail me](adnanishaqola@gmail.com) for suggestions, contributions, issues and features.
+Feel free to [email me](adnanishaqola@gmail.com) for suggestions, contributions, issues and features.
 
 ## Show your support <a name="support"></a>
 
