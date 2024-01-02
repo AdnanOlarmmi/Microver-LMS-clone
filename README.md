@@ -5,7 +5,6 @@
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
     - [📹 Video Description](#video-description)
-    - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
