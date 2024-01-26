@@ -115,6 +115,7 @@ In the project directory, you can run:
 
 - Implement user engagement features (likes, comments, and ratings) for each course list.
 - Enable users to add more personal information.
+- Add View
 
 ## Contributing
 
