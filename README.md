@@ -4,6 +4,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+    - [Why](#why)
     - [📹 Video Description](#video-description)
 - [💻 Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
@@ -51,6 +52,9 @@ Baked solutions like Devise::JWT or Knock weren't used; It was implemented at a 
   - Return a list of all courses that the current user is enrolled in (including the names of the courses the user is enrolled in and the respective enrollment dates).
   - A user may enroll in multiple courses simultaneously, and a course may have many enrolled students at the same time.
   - Finally, the application also has a Sidekiq worker that periodically fetches data from a remote API and updates the local database with new courses. It was scheduled to run periodically.
+
+### Key Features
+- To understand the working principle of Rails authentication and authorization in depth, without having to use baked solutions like Devise and Cancancan.
 
 ### Video Description
 
